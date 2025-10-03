@@ -407,6 +407,42 @@
         height: 36px;
         font-size: 0.9rem;
     }
+    
+    /* Additional mobile improvements for very small screens */
+    .product-main {
+        padding: 5rem 2% 2rem;
+    }
+    
+    .product-info h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .product-info .description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .features-list,
+    .maintenance-list {
+        font-size: 0.8rem;
+    }
+    
+    .book-now-btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .price-range {
+        font-size: 1.5rem;
+    }
+    
+    .features-section h3,
+    .maintenance-section h3 {
+        font-size: 1.2rem;
+    }
+}
 
     .product-info h1 {
         font-size: 2rem;

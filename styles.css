@@ -626,6 +626,77 @@ footer {
         text-align: center;
     }
     
+    /* Additional mobile improvements */
+    .section {
+        padding: 3rem 1rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Mobile form improvements */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 0.9rem;
+    }
+    
+    /* Mobile service card improvements */
+    .service-card {
+        margin-bottom: 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-card i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Mobile testimonial improvements */
+    .testimonial-card {
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    /* Mobile contact info improvements */
+    .contact-info-item {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .contact-info-item i {
+        font-size: 1.2rem;
+        margin-right: 0.8rem;
+    }
+    
+    /* Mobile social links */
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
     /* Mobile search styles */
     .search-input-group {
         flex-direction: column;
