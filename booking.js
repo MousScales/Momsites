@@ -701,9 +701,9 @@ const stripe = Stripe('pk_live_51REifLRqvuBtPAdXaNce44j5Fe7h0Z1G0pqr1x4i6TRK4Z1T
         },
         'test': {
             name: 'Test',
-            basePrices: { standard: 1 },
+            basePrices: { standard: 10 },
             duration: { standard: 0.5 },
-            deposit: 1,
+            deposit: 10,
             specificOptions: {
                 'test-option': {
                     label: 'Test Option',

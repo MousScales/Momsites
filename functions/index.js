@@ -907,7 +907,7 @@ exports.syncToGoogleCalendar = onRequest({
           'barrel-twists': { standard: 150 },
           'starter-locs': { standard: 150 },
           'weave': { standard: 150 },
-          'test': { standard: 1 },
+          'test': { standard: 10 },
           'test-style': { standard: 1 }
         };
         
