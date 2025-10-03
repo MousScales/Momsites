@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya African Hair Braiding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        .maintenance-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .maintenance-content {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .maintenance-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .maintenance-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .maintenance-message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .maintenance-phone {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .maintenance-phone a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .maintenance-phone a:hover {
+            color: #fff;
+        }
+        
+        .maintenance-hours {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .maintenance-note {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .maintenance-content {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+            
+            .maintenance-title {
+                font-size: 2rem;
+            }
+            
+            .maintenance-message {
+                font-size: 1rem;
+            }
+            
+            .maintenance-phone {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Maintenance Overlay -->
+    <!-- <div class="maintenance-overlay">
+        <div class="maintenance-content">
+            <div class="maintenance-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h1 class="maintenance-title">Site Currently Down</h1>
+            <p class="maintenance-message">
+                We're currently experiencing technical difficulties with our online booking system. 
+                Please call us directly to schedule your appointment.
+            </p>
+            <div class="maintenance-phone">
+                <i class="fas fa-phone"></i>
+                <a href="tel:8604250751">860-425-0751</a>
+            </div>
+            <div class="maintenance-hours">
+                <strong>Hours:</strong> Monday - Saturday: 7am - 6pm<br>
+                Sunday: Closed
+            </div>
+            <p class="maintenance-note">
+                We apologize for the inconvenience and appreciate your patience while we resolve this issue.
+            </p>
+        </div>
+    </div> -->
+
+    <nav class="navbar">
+        <a href="/" class="logo">Maya African Hair Braiding</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Style with Expert African Braiding</h1>
+            <p>Discover handcrafted braids that blend tradition, care, and modern beauty.</p>
+            <div class="cta-buttons">
+                <a href="catalog" class="cta-button">View Styles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Appointments Section -->
+    <section class="search-appointments-section">
+        <div class="container">
+            <h2 class="section-title">Find Your Appointment</h2>
+            <p class="section-subtitle">Enter your phone number to search for your existing appointments</p>
+            
+            <div class="search-form">
+                <div class="search-input-group">
+                    <input type="tel" id="search-phone" placeholder="Enter your phone number" class="search-input">
+                    <button id="search-btn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+
+            </div>
+            
+            <div id="search-results" class="search-results" style="display: none;">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">Where To Find Us</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.7647494455247!2d-72.10187862346186!3d41.35543769912086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e60e4f7a83f95d%3A0x35d99e9c0b86c6d0!2s116%20Ocean%20Ave%2C%20New%20London%2C%20CT%2006320!5e0!3m2!1sen!2sus!4v1709852612227!5m2!1sen!2sus"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="location-info">
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>116 Ocean Avenue<br>New London, CT 06320</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Maya African Hair Braiding</h3>
+                <p>Professional hair braiding services with years of experience</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> <a href="tel:8604250751" style="color: inherit; text-decoration: none;">860-425-0751</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                                        <p>Monday - Saturday: 7am - 6pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/mayadoeshairrr" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@mayadoeshairr" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Maya African Hair Braiding. All rights reserved.</p>
+            <button id="admin-login-btn" class="admin-login-button">Admin</button>
+        </div>
+    </footer>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h2>Admin Access</h2>
+                <button class="admin-modal-close">&times;</button>
+            </div>
+            <div class="admin-modal-body">
+                <form id="admin-login-form">
+                    <div class="form-group">
+                        <label for="admin-passkey">Enter Passkey</label>
+                        <input type="password" id="admin-passkey" placeholder="Enter passkey" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="admin-login-submit">Access Admin</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reschedule Modal -->
+    <div id="reschedule-modal" class="reschedule-modal">
+        <div class="reschedule-modal-content">
+            <div class="reschedule-modal-header">
+                <h2>Reschedule Appointment</h2>
+                <button class="reschedule-modal-close">&times;</button>
+            </div>
+            <div class="reschedule-modal-body">
+                <div id="reschedule-appointment-info">
+                    <!-- Current appointment info will be displayed here -->
+                </div>
+                
+                <div class="reschedule-calendar-section">
+                    <h3>Select New Date & Time</h3>
+                    <p class="reschedule-notice">Note: Appointments must be scheduled at least 30 hours in advance. If the time you want isn't available or if you need a last-minute appointment, please call 860-425-0751 and we can see if we can fit you in.</p>
+                    <div class="reschedule-calendar-container">
+                        <div class="reschedule-calendar-header">
+                            <button id="reschedule-prev-month" class="calendar-nav-btn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <span id="reschedule-current-month">January 2024</span>
+                            <button id="reschedule-next-month" class="calendar-nav-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="reschedule-calendar-grid">
+                            <div class="reschedule-calendar-weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div id="reschedule-calendar-days" class="reschedule-calendar-days">
+                                <!-- Calendar days will be generated here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="reschedule-time-slots" class="reschedule-time-slots" style="display: none;">
+                        <h4>Available Times</h4>
+                        <div id="reschedule-time-slots-container">
+                            <!-- Time slots will be generated here -->
+                        </div>
+                    </div>
+                    
+                    <div id="reschedule-selection-summary" class="reschedule-selection-summary" style="display: none;">
+                        <h4>Selected Appointment</h4>
+                        <div class="selection-info">
+                            <div class="selection-item">
+                                <i class="fas fa-calendar"></i>
+                                <span id="selected-date-display">No date selected</span>
+                            </div>
+                            <div class="selection-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="selected-time-display">No time selected</span>
+                            </div>
+                            <div class="selection-item">
+                                <i class="fas fa-hourglass-end"></i>
+                                <span id="selected-end-time-display">Duration: --</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reschedule-actions">
+                    <button id="confirm-reschedule-btn" class="confirm-reschedule-btn" disabled>
+                        <i class="fas fa-calendar-check"></i>
+                        Confirm Reschedule
+                    </button>
+                    <button id="cancel-reschedule-btn" class="cancel-reschedule-btn">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
