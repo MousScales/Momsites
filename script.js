@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const adminPasskeyInput = document.getElementById('admin-passkey');
     
     // Passkey for admin access
-    const ADMIN_PASSKEY = '111970';
+    const ADMIN_PASSKEY = '1970';
     
     // Show admin modal when admin button is clicked
     adminLoginBtn.addEventListener('click', function() {

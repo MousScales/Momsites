@@ -13,6 +13,26 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
+    <!-- Admin Login Screen -->
+    <div id="admin-login-screen" class="admin-login-screen">
+        <div class="admin-login-container">
+            <div class="admin-login-header">
+                <h1>Admin Access</h1>
+                <p>Enter password to access booking management</p>
+            </div>
+            <form id="admin-login-form" class="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" placeholder="Enter admin password" required>
+                </div>
+                <button type="submit" class="admin-login-btn">Access Admin</button>
+                <div id="admin-error" class="admin-error" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Interface (hidden until authenticated) -->
+    <div id="admin-interface" class="admin-interface" style="display: none;">
     <div class="container">
         <div class="calendar-header">
             <div class="header-left">
@@ -85,5 +105,6 @@
     
     <!-- Custom JS -->
     <script src="admin.js"></script>
+    </div> <!-- End admin-interface -->
 </body>
 </html> 

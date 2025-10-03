@@ -1822,11 +1822,23 @@ const stripe = Stripe('pk_live_51REifLRqvuBtPAdXaNce44j5Fe7h0Z1G0pqr1x4i6TRK4Z1T
         }
     }
 
-    // Admin login button functionality
+    // Admin login button functionality with password protection
     const adminLoginBtn = document.getElementById('admin-login-btn');
     if (adminLoginBtn) {
         adminLoginBtn.addEventListener('click', function() {
-            window.location.href = 'admin.html';
+            // Check if already authenticated
+            if (sessionStorage.getItem('adminAuthenticated') === 'true') {
+                window.location.href = 'admin.html';
+            } else {
+                // Show password prompt
+                const password = prompt('Enter admin password:');
+                if (password === '1970') {
+                    sessionStorage.setItem('adminAuthenticated', 'true');
+                    window.location.href = 'admin.html';
+                } else if (password !== null) {
+                    alert('Incorrect password. Access denied.');
+                }
+            }
         });
     }
 });

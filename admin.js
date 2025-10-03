@@ -1,7 +1,46 @@
 'use strict';
 
-// Wait for both Firebase and FullCalendar to be available
-document.addEventListener('DOMContentLoaded', async () => {
+// Admin password protection
+const ADMIN_PASSWORD = '1970';
+
+// Check if user is authenticated
+function isAuthenticated() {
+    return sessionStorage.getItem('adminAuthenticated') === 'true';
+}
+
+// Show admin interface
+function showAdminInterface() {
+    document.getElementById('admin-login-screen').style.display = 'none';
+    document.getElementById('admin-interface').style.display = 'block';
+}
+
+// Show login screen
+function showLoginScreen() {
+    document.getElementById('admin-login-screen').style.display = 'flex';
+    document.getElementById('admin-interface').style.display = 'none';
+}
+
+// Handle admin login
+function handleAdminLogin(event) {
+    event.preventDefault();
+    const password = document.getElementById('admin-password').value;
+    const errorDiv = document.getElementById('admin-error');
+    
+    if (password === ADMIN_PASSWORD) {
+        sessionStorage.setItem('adminAuthenticated', 'true');
+        showAdminInterface();
+        // Initialize the admin functionality
+        initializeAdminFunctionality();
+    } else {
+        errorDiv.textContent = 'Incorrect password. Please try again.';
+        errorDiv.style.display = 'block';
+        document.getElementById('admin-password').value = '';
+        document.getElementById('admin-password').focus();
+    }
+}
+
+// Initialize admin functionality (moved from the main function)
+async function initializeAdminFunctionality() {
     // Check if required globals are available
     if (typeof firebase === 'undefined') {
         console.error('Firebase is not loaded');
@@ -530,5 +569,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             `;
         }
+    }
+}
+
+// Wait for both Firebase and FullCalendar to be available
+document.addEventListener('DOMContentLoaded', async () => {
+    // Check authentication first
+    if (!isAuthenticated()) {
+        showLoginScreen();
+        // Add event listener for login form
+        document.getElementById('admin-login-form').addEventListener('submit', handleAdminLogin);
+        return; // Don't proceed with admin functionality
+    } else {
+        showAdminInterface();
+        // Initialize admin functionality if already authenticated
+        initializeAdminFunctionality();
     }
 });
